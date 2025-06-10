@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Employee</title>
+  <style>
+    h3{
+    font-size:30px;
+    color: rgb(248, 248, 248);
+    font-weight:bold;
+    }
+    .addemployee{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: rgb(143, 163, 218) ;
+    color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 20px;
+    }
+    .form-box {
+    background-color: #d25e3d;
+    padding: 100px;
+    padding-top:10px;
+    padding-bottom: 60px;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgb(218, 149, 91);
+    display:flex;
+    }
+    .department,.email,.phone,.salary{
+    margin-right: 206px;
+    margin-top: 12px;
+    }
+
+
+
+ .name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    }
+
+.firstname,
+.lastname,
+.department,
+.email,
+.phone,
+.salary{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(75, 119, 71);
+    color: black;
+    font-weight: 100;
+    }
+
+.firstname:hover,
+.lastname:hover,
+.department:hover,
+.email:hover,
+.phone:hover,
+.salary:hover,
+.submit:hover{
+    background-color: rgb(8, 229, 60);
+    cursor: pointer;
+    }
+
+    .submit{
+    margin-top: 50px;
+    margin-left: 240px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(26, 47, 61);
+    color: white;
+    border-radius: 5px;
+    }
+
+  </style>
+
+</head>
+<body class="addemployee">
+<div class="form-box">
+  <form id="empform" th:action="@{'/edit/' + ${employee.id}}" method="post">
+
+    <h3>Edit Employee</h3>
+    <input type="hidden" id="id" placeholder="id"><br>
+    <div class="name">
+      <input type="text" th:value="${employee.firstname}" name="firstname" id="firstname" class="firstname"  required>
+
+      <input type="text" th:value="${employee.lastname}" name="lastname" id="lastname" class="lastname"><br>
+    </div>
+    <input type="text" th:value="${employee.department}" name="department" id="age" class="department" required><br>
+
+    <input type="email" th:value="${employee.email}" name="email" id="email" class="email" ><br>
+
+    <input type="text" th:value="${employee.phoneno}" name="phoneno" id="phoneno" class="phone"><br>
+
+    <input type="text" th:value="${employee.salary}" name="salary" id="salary" class="salary"><br>
+
+    <button type="submit" id="submit" class="submit">Update</button>
+
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="addemployee">
+<div class="form-box">
+    <form id="empform" th:action="@{/addEmployee}" th:object="${employee}" method="post">
+
+        <h3>Add Employee</h3>
+        <input type="hidden" id="id" placeholder="id" autocomplete="on"><br>
+        <div class="name">
+            <input type="text" th:field="*{firstname}" id="firstname" class="firstname" placeholder="First Name" required>
+            <span th:if="${#fields.hasErrors('firstname')}" th:error="*{firstname}" class="error" > </span>
+
+            <input type="text" th:field="*{lastname}" id="lastname" class="lastname" placeholder="Last Name">
+            <span th:if="${#fields.hasErrors('lastname')}" th:error="*{lastname}" class="error" > </span><br>
+        </div>
+        <input type="text" th:field="*{department}"  id="department" class="department" placeholder="department" required><br>
+
+        <input type="email" th:field="*{email}" id="email" class="email" placeholder="Email Id"><br>
+
+        <input type="number" th:field="*{phoneno}" id="phoneno" class="phone" placeholder="Phone No"><br>
+
+        <input type="number" th:field="*{salary}" id="salary" class="salary" placeholder="Salary"><br>
+
+        <input type="submit" id="submit" class="submit" value="submit">
+
+    </form>
+
+</div>
+
+
+</body>
+
+
+</html>

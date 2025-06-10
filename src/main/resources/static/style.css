@@ -1,0 +1,202 @@
+
+.index {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+
+  }
+
+  .addemployee{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: rgb(143, 163, 218) ;
+    color: rgb(23, 23, 23);
+    text-align: center;
+    padding: 20px;
+  }
+
+.container{
+    background-color: rgb(0, 50, 124);
+    padding: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+     color: rgb(255, 255, 255);
+
+}
+
+.head{
+    color: rgba(156, 113, 27, 0.988);
+    text-align: center;
+    margin-bottom: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px rgb(244, 242, 236);
+}
+
+
+
+.add_btn {
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(48, 199, 61);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table{
+    margin: 50px auto;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgb(255, 247, 0);
+    border: none;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.th {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+td{
+background-color:rgb(153, 140, 140);
+padding:3px;
+}
+
+
+.table{
+    margin-top: 60px;
+    text-align: center;
+
+}
+
+
+.form-box {
+    background-color: #d25e3d;
+    padding: 100px;
+    padding-top:10px;
+    padding-bottom: 60px;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgb(218, 149, 91);
+    display:flex;
+
+  }
+
+ .department,.email,.phone,.salary{
+    margin-right: 206px;
+    margin-top: 12px;
+ }
+
+
+
+ .name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+
+ }
+
+.firstname,
+.lastname,
+.department,
+.email,
+.phone,
+.salary{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(97, 107, 87);
+    color: black;
+    font-weight: 100;
+}
+
+.firstname:hover,
+.lastname:hover,
+.department:hover,
+.email:hover,
+.phone:hover,
+.salary:hover,
+.add_btn:hover,
+.submit:hover,
+.view:hover,
+.edit:hover,
+.delete:hover{
+    background-color: rgb(2, 253, 90);
+    cursor: pointer;
+}
+
+h3{
+    font-size:30px;
+    color: rgb(255, 255, 255);
+    font-weight:bold;
+}
+
+.submit{
+    margin-top: 50px;
+    margin-left: 240px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(26, 47, 61);
+    color: white;
+    border-radius: 5px;
+
+}
+
+#emptable{
+    background-color: white;
+
+}
+
+.edit{
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    padding: 1.5px;
+    color: black;
+    background-color:rgb(48, 199, 61);
+    cursor: pointer;
+}
+
+.delete{
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    padding: 1.5px;
+    color: black;
+    background-color:rgb(245, 0, 33);
+    cursor: pointer;
+}
+
+#view{
+    text-decoration: none;
+    padding: 1.5px;
+    background-color: rgb(48, 199, 61);
+    border-radius: 3px;
+    color: black;
+    cursor:pointer;
+}
+
+.viewbody{
+    background-color: #dff5f5;
+}
+
+.employeebox{
+    background-color: #ffffff;
+    padding: 20px;
+    width: 400px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgb(116, 170, 139);
+}

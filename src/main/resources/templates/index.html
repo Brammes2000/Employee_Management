@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index">
+
+<div class="container">
+    <h2>Employee Management Application</h2>
+</div>
+
+<h3 class="head">Employees List</h3>
+
+    <div class="table">
+        <a th:href="@{/addEmployee}" class="add_btn">Add Employee</a>
+        <table>
+
+            <thead>
+            <tr>
+                <th class="th">First Name</th>
+                <th class="th">Last Name</th>
+                <th class="th">Department</th>
+                <th class="th">Email</th>
+                <th class="th">Phone No</th>
+                <th class="th">Salary</th>
+                <th class="th">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee: ${employeeList}">
+                <td th:text="${employee.firstname}"></td>
+                <td th:text="${employee.lastname}"></td>
+                <td th:text="${employee.department}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.phoneno}"></td>
+                <td th:text="${employee.salary}"></td>
+                <td>
+                    <a th:href="@{'/view/' + ${employee.id}}" class="view" id="view">View</a>
+                    <a th:href="@{'/edit/' + ${employee.id}}" class="edit">Edit</a>
+                    <a th:href="@{'/delete/' + ${employee.id}}" class="delete" >Delete</a>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>
